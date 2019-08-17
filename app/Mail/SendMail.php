@@ -31,6 +31,6 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->setAddress('helloteju96@gmail.com')->view('emails.email')->with('data', $this->data);;
+        return $this->setAddress('wilson@whitetower.com.au')->view('emails.email')->with('data', $this->data);;
     }
 }
