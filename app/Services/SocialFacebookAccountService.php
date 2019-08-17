@@ -4,6 +4,7 @@ namespace App\Services;
 use App\SocialFacebookAccount;
 use App\User;
 use Laravel\Socialite\Contracts\User as ProviderUser;
+use Illuminate\Support\Facades\Hash;
 
 class SocialFacebookAccountService
 {
@@ -24,7 +25,7 @@ class SocialFacebookAccountService
                 $user = User::create([
                     'email' => $providerUser->getEmail(),
                     'name' => $providerUser->getName(),
-                    'password' => md5(rand(1,10000)),
+                    'password' => Hash::make(rand(1,10000)),
                 ]);
             }
             $account->user()->associate($user);
