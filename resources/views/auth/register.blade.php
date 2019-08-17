@@ -49,8 +49,17 @@
 						</div>
 
 						<div class="form-group row mb-0">
-							<button type="submit" class="btn btn-primary">{{ __('Register')
+							<button type="submit" class="btn btn-primary btn-block">{{ __('Register')
 								}}</button>
+						</div>
+						<br>
+						<div class="form-group row mb-0">
+							<a href="{{url('/redirect')}}" class="btn btn-primary btn-block">Login with
+								Facebook</a>
+						</div>
+						
+						<div class="form-group row mb-0">
+							Already have an account? <a href="{{url('/login')}}" >Sign In</a>
 						</div>
 					</form>
 				</div>
