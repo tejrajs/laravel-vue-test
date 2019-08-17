@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-		<div class="row mb-3 justify-content-center">
+		<div class="row mb-6 justify-content-center">
 			<div class="card">
 				<div class="card-body">
 					<form @submit.prevent="hireEmployee">

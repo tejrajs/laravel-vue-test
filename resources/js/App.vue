@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="content">
+	<div class="container">
+		<h3>Employees</h3>
+	</div>
     <user-component></user-component>
 	<hire-form></hire-form>
   </div>  

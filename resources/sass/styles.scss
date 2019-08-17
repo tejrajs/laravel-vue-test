@@ -4,3 +4,18 @@
 .show{
 	display: block;
 }
+
+.card{
+	margin: 5px;
+	border: 4px solid #3490dc;
+}
+.btn-light:hover{
+	color: #fff;
+    background-color: #3490dc;
+    border-color: #3490dc;
+}
+.btn-primary:hover{
+	color: #212529;
+    background-color: #dae0e5;
+    border-color: #d3d9df;
+}

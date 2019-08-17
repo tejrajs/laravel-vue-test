@@ -59,8 +59,14 @@
 						</div>
 					</div>
 					<div class="card-footer">
-						<button type="button" :class="{'btn-secondary': index !== showMore, 'btn-primary': index === showMore}" class="btn" @click="activeShowMore(index)">Show {{index === showMore?'Less':'More'}}</button>
-						<button type="button" :class="{'btn-secondary': people.name != hireEmply, 'btn-primary': people.name == hireEmply}" class="btn" @click="hireEmployee(people)">Hire</button>
+						<div class="row">
+							<div class="col-md-6">
+								<button type="button" :class="{'btn-light': index !== showMore, 'btn-primary': index === showMore}" class="btn btn-block" @click="activeShowMore(index)">Show {{index === showMore?'Less':'More'}}</button>
+							</div>
+							<div class="col-md-6">
+								<button type="button" :class="{'btn-primary': people.name != hireEmply, 'btn-light': people.name == hireEmply}" class="btn btn-block" @click="hireEmployee(people)">Hire</button>
+							</div>
+						</div>	
 					</div>
 				</div>
 			</div>
