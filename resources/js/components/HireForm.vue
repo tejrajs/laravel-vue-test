@@ -88,10 +88,13 @@
             hireEmployee() {
                 axios
                     .post('/hire', this.people)
-                    .then(response => (
-                        this.$router.push({name: 'home'})
-                        // console.log(response.data)
-                    ))
+                    .then(response => {
+						if(response.data.success){
+							alert('Sent Mail Sucessfully');
+						}
+						this.clearForm();
+                        console.log(response)
+					})
                     .catch(error => console.log(error))
                     .finally(() => this.loading = false)
 			},
