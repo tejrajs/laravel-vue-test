@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h3>Star War</h3>
+            <h3>Contact Us</h3>
         </div>
     </div>
 </div>

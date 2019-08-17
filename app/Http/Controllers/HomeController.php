@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    
+    /**
+     * Show the application contactus.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function contactus()
+    {
+        return view('contactus');
+    }
 }
