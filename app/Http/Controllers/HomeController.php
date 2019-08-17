@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMail;
 
 class HomeController extends Controller
 {
@@ -37,6 +39,9 @@ class HomeController extends Controller
         return view('contactus');
     }
     
+    /**
+     * Fetch People from Api.
+     */
     public function peoples()
     {
         $client = new Client();
@@ -46,5 +51,19 @@ class HomeController extends Controller
         $body = $response->getBody()->getContents();
         
         return $body;
+    }
+    /**
+      * Hire employee send email.
+    */
+    public function hire(Request $request)
+    {
+        Mail::to($request)->send(new SendMail($request));
+        
+        if (Mail::failures()) {
+            return response()->json(['success' => '0'], 401);
+        }else{
+            return response()->json(['success' => '1'], 200);
+        }
+        //return $request;
     }
 }
