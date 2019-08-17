@@ -14,3 +14,8 @@ yarn-error.log
 .buildpath
 .project
 .settings/
+
+/public/js
+/public/css
+/public/build
+/public/mix-manifest.json
