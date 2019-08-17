@@ -4,6 +4,12 @@ Test App For Vue &amp; Laravel
 ## Quick Start
 
 ``` bash
+# Clone The Repo
+git clone https://github.com/tejrajs/laravel-vue-test.git
+
+# Get inside to the Repo
+cd laravel-vue-test
+
 # Install Dependencies
 composer install
 
