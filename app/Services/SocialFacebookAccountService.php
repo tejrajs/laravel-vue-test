@@ -1,8 +1,10 @@
 <?php
 namespace App\Services;
+
 use App\SocialFacebookAccount;
 use App\User;
 use Laravel\Socialite\Contracts\User as ProviderUser;
+
 class SocialFacebookAccountService
 {
     public function createOrGetUser(ProviderUser $providerUser)
