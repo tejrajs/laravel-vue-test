@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use GuzzleHttp\Client;
 
 class HomeController extends Controller
 {
@@ -34,5 +35,16 @@ class HomeController extends Controller
     public function contactus()
     {
         return view('contactus');
+    }
+    
+    public function peoples()
+    {
+        $client = new Client();
+        
+        $response = $client->request('GET', 'https://swapi.co/api/people/');
+        $statusCode = $response->getStatusCode();
+        $body = $response->getBody()->getContents();
+        
+        return $body;
     }
 }
